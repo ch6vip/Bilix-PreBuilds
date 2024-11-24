@@ -55,7 +55,7 @@ jobs:
       - name: Get build resource
         run: |
           echo Downloading CI zip
-          git clone --recurse-submodules https://github.com/sti-233/BiliRoamingX.git
+          git clone --recurse-submodules https://github.com/ch6vip/BiliRoamingX.git
           cp -r ./BiliRoamingX/* ./
           echo Downloading modified revanced-cli
           wget https://github.com/zjns/revanced-cli/releases/download/v4.6.0.1/revanced-cli.jar
@@ -165,7 +165,7 @@ jobs:
           echo "bigver=$bigver" >> $GITHUB_ENV
 
       # get build resource in ci zip
-      - name: Unzip CI zip and Rename
+      - name: Unzip CI zip 和 Rename
         run: |
           unzip BiliRoamingX-CI-Build.zip
           mv BiliRoamingX-integrations-${{ env.ver }}.apk integrations.apk
@@ -424,12 +424,12 @@ jobs:
               msg_p3 = f"<pre>cn {ver} {ver_code}</pre>"
               msg_p4 = "New release to GitHub!<pre>"
               msg_p5 = inspect.cleandoc("""
-              > 合并 sti-233/BiliRoamingX
+              > 合并 ch6vip/BiliRoamingX
                *现在具有切换更新源的能力\n
               """)
               msg_p6 = f"{changelog}</pre>"
               msg_p7 = inspect.cleandoc("""
-              by sti-233
+              by ch6vip
               在Github查看详情
               
               *此为非官方构建
